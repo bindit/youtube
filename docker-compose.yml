@@ -1,0 +1,10 @@
+version: '2'
+services:
+  yt:
+    image: golang:1.4
+    working_dir: /go/src/youtube
+    command: go test
+    volumes:
+      - .:/go/src/youtube
+    ports:
+      - "8000:8080"
